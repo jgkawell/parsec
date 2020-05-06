@@ -65,6 +65,7 @@ def run(input):
 
     return questions_asked
 
+
 def setup_nlp(processor, sentence, tree):
     # Get the word similarity scores for working dictionary
     word_similarity_scores = processor.process_input(sentence)
@@ -86,6 +87,7 @@ def setup_nlp(processor, sentence, tree):
 
     return question_nodes
 
+
 def setup_tree(tree):
     # Get root of tree
     root = tree.nodes[('root')]
@@ -100,8 +102,9 @@ def setup_tree(tree):
 
     return question_nodes
 
+
 def setup_tree_nlp(processor, sentence, tree):
-        # Get the word similarity scores for working dictionary
+    # Get the word similarity scores for working dictionary
     word_similarity_scores = processor.process_input(sentence)
 
     # Score each node in the tree based of word similarity score
@@ -111,6 +114,7 @@ def setup_tree_nlp(processor, sentence, tree):
     question_nodes = tree.get_questions()
 
     return question_nodes
+
 
 def iterate_over_nodes(mode, tree, question_nodes, correct_params, total_questions_asked):
     # Display question that will be asked
@@ -126,6 +130,7 @@ def iterate_over_nodes(mode, tree, question_nodes, correct_params, total_questio
             break
 
     return result, total_questions_asked, response, params
+
 
 def node_handle(mode, tree, node, correct_params, total_questions_asked):
 
