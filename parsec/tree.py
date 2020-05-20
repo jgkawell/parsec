@@ -1,11 +1,21 @@
 import yaml
 import random
 import pdb
-import Queue
 import numpy as np
 
-from sys import maxint
+# Python 2.7 backward compatibility
+try:
+    import queue
+except ImportError:
+    import Queue as queue
+
 from itertools import combinations
+
+# Python 2.7 backward compatibility
+try:
+    from sys import maxint
+except ImportError:
+    from sys import maxsize as maxint
 
 __BASE_QUERY = "Did the problem have to do with "
 
