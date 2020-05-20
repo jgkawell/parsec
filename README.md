@@ -20,10 +20,16 @@ Below is an example of a partial PARSEC tree. Blue nodes represent parameter typ
 
 ## Installation
 
-The PARSEC algorithm can be installed using `pip` on both Python 2.7 and Python 3.*. It will be installed with the package name `parsec`. To install, simply run the below command after cloning the repository:
+The PARSEC algorithm can be installed using `pip` on both Python 2.7 and Python 3.*. It will be installed with the package name `parsec`. To install, simply run the below command after cloning and moving into the repository:
 
 ```bash
 pip install .
+```
+
+And then make sure that the NLTK Wordnet model is downloaded:
+
+```bash
+python scripts/nltk_setup.py
 ```
 
 ## Usage
