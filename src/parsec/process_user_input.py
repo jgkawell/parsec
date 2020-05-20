@@ -72,10 +72,3 @@ class ProcessInput:
         s = sum([scores[score] for score in scores])
         scores = {score: scores[score] / s for score in scores}
         return scores
-
-
-if __name__ == "__main__":
-    pi = ProcessInput('../../config/dictionaries.yml')
-    pi.build_dicts()
-    print(pi.process_input(
-        'i didn\'t like that the robot moved the mug over the laptop'))
