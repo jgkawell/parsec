@@ -3,8 +3,9 @@ python: 3.6
 
 before_install:
     - pip install pycodestyle
-    - pip install -r requirements.txt
+    - pip install .
 
 script:
     - pycodestyle --ignore=E121,E123,E126,E226,E24,E704,W503,W504,E501 .
     - python scripts/nltk_setup.py
+    - cd ./scripts && python auto_testing.py -n 2
