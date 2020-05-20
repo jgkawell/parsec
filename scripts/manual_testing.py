@@ -5,19 +5,17 @@ import numpy as np
 
 from test_data import Data
 from datetime import datetime
-from multiprocessing import Pool
-from process_user_input import ProcessInput
+from parsec.process_user_input import ProcessInput
 
 # Setup argparse
-_parser = argparse.ArgumentParser(description='Run feedback tests automatically')
+_parser = argparse.ArgumentParser(description='Run feedback tests manually')
 _parser.add_argument('-t', action='store', dest='test', type=str, metavar='test', default='nlp', help='The test type to run (nlp/tree/tree_nlp)')
 _parser.add_argument('-d', action='store', dest='data', type=str, metavar='data', default='basic', help='Data to run (basic/handover/pour/cleaning/rl)')
 _parser.add_argument('-o', action='store', dest='output', type=str, metavar='output', default='../output', help='Output directory for results')
 _parser.add_argument('-c', action='store', dest='config', type=str, metavar='config', default='../config/cclfd', help='Configuration directory (prebuilt: ../config/cclfd and ../config/rl)')
-_parser.add_argument('-n', action='store', dest='num_tests', type=int, metavar='num_tests', default=10, help='Number of tests to run')
 
 
-def run(test_type, num_tests, data, output_dir, config_dir):
+def run(test_type, data, output_dir, config_dir):
     # Setup variables and data
     faults = Data(data).faults
     num_explanations = len(faults.keys())
@@ -31,14 +29,7 @@ def run(test_type, num_tests, data, output_dir, config_dir):
     processor.build_dicts()
 
     # Collect data from tests
-    data = []
-    num_proc = 10
-    for i in range(0, num_tests):
-        p = Pool(processes=num_proc)
-        new_data = p.map(tester.run, [(processor, "auto", output_dir, config_dir, faults, test_type) for j in range(num_proc)])
-        data.extend(new_data)
-        p.close()
-        print("Finished: {}/{}".format((i + 1) * num_proc, num_tests * num_proc))
+    data = [tester.run((processor, "manual", output_dir, config_dir, faults, test_type))]
 
     # Convert data into 2D array
     results = [[] for i in range(0, num_explanations)]
@@ -71,5 +62,5 @@ if __name__ == "__main__":
     # Read arguments
     args = _parser.parse_args()
 
-    # Run all cases in a loop
-    run(args.test, args.num_tests, args.data, args.output, args.config)
+    # Run tests
+    run(args.test, args.data, args.output, args.config)

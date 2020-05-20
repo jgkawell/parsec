@@ -1,6 +1,6 @@
 import random
 
-from tree import Node, Tree
+from parsec.tree import Node, Tree
 
 
 _CONSTRAINTS_FILE = '/constraints.yml'
