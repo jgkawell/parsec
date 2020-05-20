@@ -420,16 +420,3 @@ class Tree():
 
             if set(bad_params).issubset(cur_params):
                 value.score = -1
-
-
-if __name__ == "__main__":
-    # Create tree for testing
-    tree = Tree()
-    tree.build('../../config/constraints.yml', '../../config/parameters.yml')
-
-    # Example search
-    query = ('roomba', 'table', 'above/object_robot')
-    print("Searching for: {}".format(query))
-
-    if not tree.search(query):
-        print("Couldn't find node")

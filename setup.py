@@ -6,6 +6,7 @@ setup(
     author='Jack Kawell',
     author_email='jack.kawell@outlook.com',
     packages=['parsec'],
+    package_dir={'': 'src'},
     install_requires=[
         'pyyaml==5.3',
         'numpy==1.16.6',
