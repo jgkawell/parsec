@@ -26,12 +26,6 @@ The PARSEC algorithm can be installed using `pip` on both Python 2.7 and Python 
 pip install .
 ```
 
-And then make sure that the NLTK Wordnet model is downloaded:
-
-```bash
-python scripts/nltk_setup.py
-```
-
 ## Usage
 
 Coming soon...
