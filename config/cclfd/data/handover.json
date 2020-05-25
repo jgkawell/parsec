@@ -1,0 +1,184 @@
+{
+    "faults": [
+        {
+            "description": "You should not tip the cup over when it is bringing it over to the person",
+            "id": 0,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "Make sure to keep the cup upright",
+            "id": 1,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "Don't turn the cup while moving it",
+            "id": 2,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "Keep the cup pointed up",
+            "id": 3,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "You should be aware of the orientation of the cup as it is moving said cup",
+            "id": 4,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "Keep the cup upright",
+            "id": 5,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "Keep the cup oriented so that the ball does not fall out when moving",
+            "id": 6,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "You shouldn't tip the cup over",
+            "id": 7,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "You should keep the cup level as you move it towards the person",
+            "id": 8,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "Don't turn the cup upside down",
+            "id": 9,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "You shouldn't tilt the cup until you are near the human/goal",
+            "id": 10,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "Keep the bottom of the cup parallel to the floor when moving",
+            "id": 11,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "Don't rotate your arm",
+            "id": 12,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "You dropped the object before reaching near the subject Drop the object only when are you closest to subject",
+            "id": 13,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "The mechanical hand should not roll as the arm is turning towards the person",
+            "id": 14,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "You rotated the cup unnecessarily and prematurely",
+            "id": 15,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "Do not tilt the cup when turning Priority placed on facing the cup up",
+            "id": 16,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "Keep the cup upright when you hand it to me, and stay away from my head",
+            "id": 17,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        }
+    ]
+}

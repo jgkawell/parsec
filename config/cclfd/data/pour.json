@@ -1,0 +1,184 @@
+{
+    "faults": [
+        {
+            "description": "You needs to make sure it is over the Tupperware before dropping the ball out of the cup",
+            "id": 0,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "Don't pour until you are over the container",
+            "id": 1,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "You moved too far before pouring",
+            "id": 2,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "Don't dump the ball until you are over the tupperware",
+            "id": 3,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "You should stop at the cup before pouring",
+            "id": 4,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "Pour the cup over the receptacle",
+            "id": 5,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "Make sure the cup is over the container before pouring the ball out of the cup ",
+            "id": 6,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "You needs to pour into the container",
+            "id": 7,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "You should pour into the plastic container",
+            "id": 8,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "Make sure the cup us over the container before dumping it out",
+            "id": 9,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "You should stop over the container and pour only when you are over the container",
+            "id": 10,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "Make sure gripper is as close as possible to the bin height wise, then make sure the side of the cup that is going to be tipped over is at the edge of the bin, so the contents fall into the bin",
+            "id": 11,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "Rotate your arm once its above the container",
+            "id": 12,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "You are pouring at the wrong location Pour the object when you are directly above the container",
+            "id": 13,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "Drop the ball in the container",
+            "id": 14,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "You failed to identify the target bowl",
+            "id": 15,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "Stop over the bowl and pour into it",
+            "id": 16,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "Make sure you pour the cup into the bowl",
+            "id": 17,
+            "constraints": [
+                "object",
+                "cup",
+                "container",
+                "above/object_object"
+            ]
+        }
+    ]
+}

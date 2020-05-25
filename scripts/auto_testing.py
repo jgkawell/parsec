@@ -1,9 +1,9 @@
 import os
+import json
 import tester
 import argparse
 import numpy as np
 
-from test_data import Data
 from datetime import datetime
 from multiprocessing import Pool
 from parsec.process_user_input import ProcessInput
@@ -19,9 +19,9 @@ _parser.add_argument('-n', action='store', dest='num_tests', type=int, metavar='
 
 def run(test_type, num_tests, data, output_dir, config_dir):
     # Setup variables and data
-    faults = Data(data).faults
-    num_explanations = len(faults.keys())
-    print("---- STARTING ----")
+    with open(config_dir + "/data/" + data + ".json") as json_file:
+        faults = json.load(json_file)['faults']
+    num_explanations = len(faults)
 
     # Run test using test helper
     print("Running {} tests...".format(test_type))
@@ -31,18 +31,18 @@ def run(test_type, num_tests, data, output_dir, config_dir):
     processor.build_dicts()
 
     # Collect data from tests
-    data = []
+    data_from_tests = []
     num_proc = 10
     for i in range(0, num_tests):
         p = Pool(processes=num_proc)
         new_data = p.map(tester.run, [(processor, "auto", output_dir, config_dir, faults, test_type) for j in range(num_proc)])
-        data.extend(new_data)
+        data_from_tests.extend(new_data)
         p.close()
         print("Finished: {}/{}".format((i + 1) * num_proc, num_tests * num_proc))
 
     # Convert data into 2D array
     results = [[] for i in range(0, num_explanations)]
-    for entry in data:
+    for entry in data_from_tests:
         for key, value in entry.items():
             results[key - 1].append(value)
     results = np.array(results).T.tolist()

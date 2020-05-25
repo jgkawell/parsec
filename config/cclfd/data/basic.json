@@ -1,0 +1,132 @@
+{
+    "faults": [
+        {
+            "description": "You should have kept the cup upright",
+            "id": 0,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "You should have moved more slowly when holding the mug",
+            "id": 1,
+            "constraints": [
+                "object",
+                "cup",
+                "speed",
+                "speed/object_max"
+            ]
+        },
+        {
+            "description": "You should have kept the cup over the table",
+            "id": 2,
+            "constraints": [
+                "object",
+                "cup",
+                "table",
+                "above/object_object"
+            ]
+        },
+        {
+            "description": "You should have kept the mug farther away from john",
+            "id": 3,
+            "constraints": [
+                "object",
+                "cup",
+                "human",
+                "john",
+                "distance",
+                "distance/object_human"
+            ]
+        },
+        {
+            "description": "You should not have pushed the block so quickly",
+            "id": 4,
+            "constraints": [
+                "object",
+                "block",
+                "speed",
+                "speed/object_max"
+            ]
+        },
+        {
+            "description": "You should not have flipped the glass upside down",
+            "id": 5,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "Do not upend the cup",
+            "id": 6,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "You were too close to the computer",
+            "id": 7,
+            "constraints": [
+                "object",
+                "computer",
+                "robot",
+                "sawyer",
+                "distance",
+                "distance/object_robot"
+            ]
+        },
+        {
+            "description": "You were too close",
+            "id": 8,
+            "constraints": [
+                "object",
+                "knife",
+                "human",
+                "jane",
+                "distance",
+                "distance/object_human"
+            ]
+        },
+        {
+            "description": "You moved to fast",
+            "id": 9,
+            "constraints": [
+                "object",
+                "computer",
+                "speed",
+                "speed/object_max"
+            ]
+        },
+        {
+            "description": "The cup",
+            "id": 10,
+            "constraints": [
+                "object",
+                "cup",
+                "angle",
+                "orientation/object"
+            ]
+        },
+        {
+            "description": "Knife",
+            "id": 11,
+            "constraints": [
+                "object",
+                "knife",
+                "human",
+                "john",
+                "distance",
+                "distance/object_human"
+            ]
+        }
+    ]
+}
