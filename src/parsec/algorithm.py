@@ -21,7 +21,7 @@ def run(input):
     config_dir = input[3]
     faults = input[4]
     test_type = input[5]
-    questions_asked = {}
+    full_results = {}
 
     # Create tree
     tree = Tree()
@@ -67,9 +67,13 @@ def run(input):
             print("Parameters: {}".format(params))
             print("Followup response: {}".format(response))
 
-        questions_asked[fault_id] = current_count
+        full_results[fault_id] = {
+            'count': current_count,
+            'params': params,
+            'followup': response
+        }
 
-    return questions_asked
+    return full_results
 
 
 def setup_nlp(processor, sentence, tree):
@@ -209,7 +213,3 @@ def node_handle(mode, tree, node, correct_params, total_questions_asked):
 
     else:
         return False, total_questions_asked, "", tuple()
-
-
-if __name__ == "__main__":
-    print("Not implemented")

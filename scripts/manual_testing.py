@@ -1,19 +1,20 @@
 import os
 import json
-import tester
 import argparse
 import numpy as np
 
+from parsec import algorithm
 from datetime import datetime
 from parsec.process_user_input import ProcessInput
 
 # Setup argparse
 _parser = argparse.ArgumentParser(description='Run feedback tests manually')
-_parser.add_argument('-t', action='store', dest='test', type=str, metavar='test', default='nlp', help='The test type to run (nlp/tree/tree_nlp)')
+_parser.add_argument('-t', action='store', dest='test', type=str, metavar='test', default='tree_nlp', help='The test type to run (nlp/tree/tree_nlp)')
 _parser.add_argument('-d', action='store', dest='data', type=str, metavar='data', default='basic', help='Data to run (basic/handover/pour/cleaning/rl)')
 _parser.add_argument('-o', action='store', dest='output', type=str, metavar='output', default='../output', help='Output directory for results')
 _parser.add_argument('-c', action='store', dest='config', type=str, metavar='config', default='../config/cclfd', help='Configuration directory (prebuilt: ../config/cclfd and ../config/rl)')
 
+_CONSTRAINTS_FILE = '/dictionaries.yml'
 
 def run(test_type, data, output_dir, config_dir):
     # Setup variables and data
@@ -27,17 +28,17 @@ def run(test_type, data, output_dir, config_dir):
     print("Running {} tests...".format(test_type))
 
     # Create word processor
-    processor = ProcessInput(config_dir + "/dictionaries.yml")
+    processor = ProcessInput(config_dir + _CONSTRAINTS_FILE)
     processor.build_dicts()
 
     # Collect data from tests
-    data_from_tests = [tester.run((processor, "manual", output_dir, config_dir, faults, test_type))]
+    data_from_tests = [algorithm.run((processor, "manual", output_dir, config_dir, faults, test_type))]
 
     # Convert data into 2D array
     results = [[] for i in range(0, num_explanations)]
     for entry in data_from_tests:
         for key, value in entry.items():
-            results[key - 1].append(value)
+            results[key - 1].append(value['count'])
     results = np.array(results).T.tolist()
 
     # Make sure directory exists
