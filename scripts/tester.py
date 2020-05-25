@@ -28,20 +28,20 @@ def run(input):
     tree.build(config_dir + _CONSTRAINTS_FILE, config_dir + _PARAMETERS_FILE)
 
     # Iterate through sentences
-    for fault, data in faults.items():
+    for fault in faults:
         current_count = 0
 
         # Reset tree scores
         for key, node in tree.nodes.items():
             node.score = 0.0
 
-        correct_params = data[0]
-        sentence = data[1]
-        # num_questions_asked = 0
+        fault_id = fault['id']
+        correct_params = fault['constraints']
+        sentence = fault['description']
 
         if mode == "manual":
             print('-' * 50)
-            print("Fault: {}".format(fault))
+            print("Fault: {}".format(fault_id))
             print("Sentence: {}".format(sentence))
 
         # Different testing setups
@@ -60,14 +60,14 @@ def run(input):
         # If no correction can be found in tree
         if not corrected:
             print("Couldn't find a correction. Try rephrasing your feedback?")
-            print(data)
+            print(fault)
 
         if mode == "manual":
             print("Total questions asked: {}".format(current_count))
             print("Parameters: {}".format(params))
             print("Followup response: {}".format(response))
 
-        questions_asked[fault] = current_count
+        questions_asked[fault_id] = current_count
 
     return questions_asked
 

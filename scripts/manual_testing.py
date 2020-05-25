@@ -1,4 +1,5 @@
 import os
+import json
 import tester
 import argparse
 import numpy as np
@@ -17,8 +18,10 @@ _parser.add_argument('-c', action='store', dest='config', type=str, metavar='con
 
 def run(test_type, data, output_dir, config_dir):
     # Setup variables and data
-    faults = Data(data).faults
-    num_explanations = len(faults.keys())
+    with open(config_dir + "/data/" + data + ".json") as json_file:
+        faults = json.load(json_file)['faults']
+    num_explanations = len(faults)
+
     print("---- STARTING ----")
 
     # Run test using test helper
@@ -29,11 +32,11 @@ def run(test_type, data, output_dir, config_dir):
     processor.build_dicts()
 
     # Collect data from tests
-    data = [tester.run((processor, "manual", output_dir, config_dir, faults, test_type))]
+    data_from_tests = [tester.run((processor, "manual", output_dir, config_dir, faults, test_type))]
 
     # Convert data into 2D array
     results = [[] for i in range(0, num_explanations)]
-    for entry in data:
+    for entry in data_from_tests:
         for key, value in entry.items():
             results[key - 1].append(value)
     results = np.array(results).T.tolist()
