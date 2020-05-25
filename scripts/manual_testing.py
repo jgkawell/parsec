@@ -4,7 +4,6 @@ import tester
 import argparse
 import numpy as np
 
-from test_data import Data
 from datetime import datetime
 from parsec.process_user_input import ProcessInput
 
