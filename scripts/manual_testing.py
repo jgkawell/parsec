@@ -16,6 +16,7 @@ _parser.add_argument('-c', action='store', dest='config', type=str, metavar='con
 
 _CONSTRAINTS_FILE = '/dictionaries.yml'
 
+
 def run(test_type, data, output_dir, config_dir):
     # Setup variables and data
     with open(config_dir + "/data/" + data + ".json") as json_file:

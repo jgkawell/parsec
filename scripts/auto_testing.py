@@ -18,6 +18,7 @@ _parser.add_argument('-n', action='store', dest='num_tests', type=int, metavar='
 
 _CONSTRAINTS_FILE = '/dictionaries.yml'
 
+
 def run(test_type, num_tests, data, output_dir, config_dir):
     # Setup variables and data
     with open(config_dir + "/data/" + data + ".json") as json_file:
