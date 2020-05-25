@@ -1,0 +1,220 @@
+{
+    "faults": [
+        {
+            "description": "You needs to respect the space around the human It should not go near the face of the person",
+            "id": 0,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "Watch out for people in your workspace",
+            "id": 1,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "Stay out of the human's vicinity while moving",
+            "id": 2,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "Always maintain an acceptable distance from a partner you are working with",
+            "id": 3,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "You should know where the human is",
+            "id": 4,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "Keep farther away from the human",
+            "id": 5,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "When moving stay further away from the person then in the previous iteration",
+            "id": 6,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "You should keep away from the person",
+            "id": 7,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "You should avoid getting too close to the person",
+            "id": 8,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "Stay away from the person at the table",
+            "id": 9,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "You should not come so close to the human",
+            "id": 10,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "Keep arm at least a foot away from the working space of the person ",
+            "id": 11,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "Don't go too close to other objects",
+            "id": 12,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "Don't move objects close to subject while cleaning Keep maximum distance from the subject while cleaning",
+            "id": 13,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "You should keep a distance of two feet from the person's face when moving",
+            "id": 14,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "You should be more aware of the surrounding space during motion",
+            "id": 15,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "Keep a safe distance from me when you are cleaning objects",
+            "id": 16,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        },
+        {
+            "description": "Stay away from my face when you are cleaning",
+            "id": 17,
+            "constraints": [
+                "robot",
+                "sawyer",
+                "human",
+                "person",
+                "distance",
+                "distance/robot_human"
+            ]
+        }
+    ]
+}

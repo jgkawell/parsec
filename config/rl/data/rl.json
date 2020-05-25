@@ -1,0 +1,55 @@
+{
+    "faults": [
+        {
+            "description": "You shouldn't go into the bottom left area",
+            "id": 0,
+            "constraints": [
+                "area",
+                "bottom",
+                "left",
+                "location/area_area"
+            ]
+        },
+        {
+            "description": "You shouldn't go into the bottom right area",
+            "id": 1,
+            "constraints": [
+                "area",
+                "bottom",
+                "right",
+                "location/area_area"
+            ]
+        },
+        {
+            "description": "You shouldn't go into a small area in the bottom right area",
+            "id": 2,
+            "constraints": [
+                "area",
+                "bottom",
+                "dimension",
+                "small",
+                "location/area_size"
+            ]
+        },
+        {
+            "description": "You shouldn't go into a specific cell in the bottom of the maze",
+            "id": 3,
+            "constraints": [
+                "area",
+                "bottom",
+                "cell",
+                "cell/cell_area"
+            ]
+        },
+        {
+            "description": "You shouldn't go into a specific cell from a certain direction",
+            "id": 4,
+            "constraints": [
+                "direction",
+                "east",
+                "cell",
+                "cell/cell_area"
+            ]
+        }
+    ]
+}
