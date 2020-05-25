@@ -1,6 +1,12 @@
 import yaml
+import nltk
 
-from nltk.corpus import wordnet
+# Make sure wordnet is downloaded
+try:
+    from nltk.corpus import wordnet
+    nltk.data.find('corpora/wordnet')
+except LookupError:
+    nltk.download("wordnet", quiet=True)
 
 
 class ProcessInput:

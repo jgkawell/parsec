@@ -6,6 +6,12 @@ from parsec.tree import Node, Tree
 _CONSTRAINTS_FILE = '/constraints.yml'
 _PARAMETERS_FILE = '/parameters.yml'
 
+# Python 2.7 compatibility
+try:
+    input = raw_input
+except NameError:
+    pass
+
 
 def run(input):
     # Extract input values (passed this way for multiprocessing)
@@ -153,7 +159,7 @@ def node_handle(mode, tree, node, correct_params, total_questions_asked):
 
         # Manual mode
         if mode == "manual":
-            response = str(raw_input("Yes or no? (Y/n)\n"))
+            response = str(input("Yes or no? (Y/n)\n"))
             if response.lower() == 'y' or response == "":
                 response = True
             else:
@@ -181,7 +187,7 @@ def node_handle(mode, tree, node, correct_params, total_questions_asked):
                                 if node_param in value:
                                     query = query.replace("[{}]".format(key), node_param, 1)
                         print("Followup: {}".format(query))
-                        response = raw_input("Give your response:\n")
+                        response = input("Give your response:\n")
 
                 return True, total_questions_asked, response, node.params
             else:
