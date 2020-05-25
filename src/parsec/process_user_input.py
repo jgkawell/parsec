@@ -1,4 +1,8 @@
 import yaml
+import nltk
+
+# Make sure wordnet is downloaded
+nltk.download("wordnet", quiet=True)
 
 from nltk.corpus import wordnet
 
