@@ -8,7 +8,7 @@ setup(
     packages=['parsec'],
     package_dir={'': 'src'},
     install_requires=[
-        'pyyaml==5.3',
+        'pyyaml==5.4',
         'numpy==1.16.6',
         'nltk==3.4.5'
     ],
