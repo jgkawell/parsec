@@ -9,7 +9,7 @@ setup(
     package_dir={'': 'src'},
     install_requires=[
         'pyyaml==5.3',
-        'numpy==1.16.6',
+        'numpy==1.22.0',
         'nltk==3.4.5'
     ],
     version='0.1',
