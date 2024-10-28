@@ -4,6 +4,8 @@
 
 A Python implementation of the PARSEC (Plan Augmentation and Repair through SEmantic Constraints) algorithm.
 
+[Paper Link](https://ieeexplore.ieee.org/document/9636375)
+
 ## Overview
 
 Developments in human-robot teaming have given rise to significant interest in training methods that enable collaborative agents to effectively execute tasks alongside human teammates. While effective, many existing methods are brittle to changes in the environment and do not account for the preferences of human collaborators. This ineffectiveness is typically due to the complexity of deployment environments and the unique personal preferences of human teammates. These complications lead to behavior that can cause task failure or user discomfort.
